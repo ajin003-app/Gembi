@@ -67,45 +67,126 @@
 
         <!-- Live Time Counters -->
         <section class="live-counters-section">
-            <h2 class="section-title">
-                <i class="fas fa-clock-rotate-left"></i>
-                <span>අදට අපි යාළු වෙලා 😌👇</span>
-            </h2>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <span>අදට අපි යාළු වෙලා 😌</span>
+                </h2>
+                <p class="section-subtitle">From Dec 12, 2025</p>
+            </div>
             
-            <div class="detailed-counter">
-                <div class="time-row">
-                    <div class="time-unit">
-                        <div class="time-value" id="yearsSince">0</div>
-                        <div class="time-label">Years</div>
+            <div class="counter-container">
+                <!-- Desktop View (Grid Layout) -->
+                <div class="counter-grid-desktop">
+                    <div class="counter-unit large">
+                        <div class="counter-value" id="yearsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-star"></i>
+                            Years
+                        </div>
                     </div>
-                    <div class="time-separator">:</div>
-                    <div class="time-unit">
-                        <div class="time-value" id="monthsSince">0</div>
-                        <div class="time-label">Months</div>
+                    
+                    <div class="counter-unit large">
+                        <div class="counter-value" id="monthsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            Months
+                        </div>
                     </div>
-                    <div class="time-separator">:</div>
-                    <div class="time-unit">
-                        <div class="time-value" id="daysSince">0</div>
-                        <div class="time-label">dates</div>
-                    </div>
-                </div>
-                <div class="time-row">
-                    <div class="time-unit">
-                        <div class="time-value" id="hoursSince">00</div>
-                        <div class="time-label">hours</div>
-                    </div>
-                    <div class="time-separator">:</div>
-                    <div class="time-unit">
-                        <div class="time-value" id="minutesSince">00</div>
-                        <div class="time-label">minutes</div>
-                    </div>
-                    <div class="time-separator">:</div>
-                    <div class="time-unit">
-                        <div class="time-value" id="secondsSince">00</div>
-                        <div class="time-label">seconds</div>
+                    
+                    <div class="counter-unit large">
+                        <div class="counter-value" id="daysSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-day"></i>
+                            Days
+                        </div>
                     </div>
                 </div>
-                <div class="counter-date">From Dec 12, 2025</div>
+                
+                <!-- Mobile View (Grid Layout) -->
+                <div class="counter-grid-mobile">
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileYearsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-star"></i>
+                            Years
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileMonthsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            Months
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileDaysSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-day"></i>
+                            Days
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileHoursSince">00</div>
+                        <div class="counter-label">
+                            <i class="fas fa-clock"></i>
+                            Hours
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileMinutesSince">00</div>
+                        <div class="counter-label">
+                            <i class="fas fa-hourglass-half"></i>
+                            Minutes
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileSecondsSince">00</div>
+                        <div class="counter-label">
+                            <i class="fas fa-stopwatch"></i>
+                            Seconds
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Time Row (Desktop) -->
+                <div class="detailed-time-row">
+                    <div class="time-unit-small">
+                        <div class="time-value-small" id="hoursSince">00</div>
+                        <div class="time-label-small">
+                            <i class="fas fa-clock"></i>
+                            Hours
+                        </div>
+                    </div>
+                    
+                    <div class="time-unit-small">
+                        <div class="time-value-small" id="minutesSince">00</div>
+                        <div class="time-label-small">
+                            <i class="fas fa-hourglass-half"></i>
+                            Minutes
+                        </div>
+                    </div>
+                    
+                    <div class="time-unit-small">
+                        <div class="time-value-small" id="secondsSince">00</div>
+                        <div class="time-label-small">
+                            <i class="fas fa-stopwatch"></i>
+                            Seconds
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Start Date Display -->
+                <div class="start-date-display">
+                    <i class="fas fa-heart-circle"></i>
+                    <span>Our journey began on <strong>Dec 12, 2025</strong></span>
+                    <i class="fas fa-heart-circle"></i>
+                </div>
             </div>
         </section>
 
