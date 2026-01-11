@@ -188,21 +188,39 @@ function updateJourneyCounters(now) {
     const seconds = totalSeconds % 60;
     
     // Update all counters
+    // Desktop counters
     document.getElementById('yearsSince').textContent = years;
     document.getElementById('monthsSince').textContent = months;
     document.getElementById('daysSince').textContent = days;
     document.getElementById('hoursSince').textContent = hours.toString().padStart(2, '0');
     document.getElementById('minutesSince').textContent = minutes.toString().padStart(2, '0');
     document.getElementById('secondsSince').textContent = seconds.toString().padStart(2, '0');
+    
+    // Mobile counters
+    document.getElementById('mobileYearsSince').textContent = years;
+    document.getElementById('mobileMonthsSince').textContent = months;
+    document.getElementById('mobileDaysSince').textContent = days;
+    document.getElementById('mobileHoursSince').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('mobileMinutesSince').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('mobileSecondsSince').textContent = seconds.toString().padStart(2, '0');
 }
 
 function resetJourneyCounters() {
+    // Desktop counters
     document.getElementById('yearsSince').textContent = '0';
     document.getElementById('monthsSince').textContent = '0';
     document.getElementById('daysSince').textContent = '0';
     document.getElementById('hoursSince').textContent = '00';
     document.getElementById('minutesSince').textContent = '00';
     document.getElementById('secondsSince').textContent = '00';
+    
+    // Mobile counters
+    document.getElementById('mobileYearsSince').textContent = '0';
+    document.getElementById('mobileMonthsSince').textContent = '0';
+    document.getElementById('mobileDaysSince').textContent = '0';
+    document.getElementById('mobileHoursSince').textContent = '00';
+    document.getElementById('mobileMinutesSince').textContent = '00';
+    document.getElementById('mobileSecondsSince').textContent = '00';
 }
 
 // Show message when memory card is clicked
