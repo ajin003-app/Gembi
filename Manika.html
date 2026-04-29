@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Month Anniversary Gembiye 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <div class="floating-elements"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-main">
+                <div class="logo">
+                    <div class="heart-logo">💝</div>
+                    <div class="logo-text">
+                        <h1>ආදරෙයි මගෙ මැට්ටිට 😊💖</h1>
+                        <p>මගෙ චූටි ගෙම්බි 😊</p>
+                    </div>
+                </div>
+                <div class="current-time-display">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <div class="live-time" id="liveTimeNow">00:00:00</div>
+                        <div class="live-date" id="currentDateNow">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Journey Messages Section (Small) -->
+        <section class="journey-section">
+            <h2 class="section-title">
+                <i class="fas fa-heart-circle-check"></i>
+                <span>මැණික 😊💖</span>
+            </h2>
+            
+            <div class="journey-messages">
+                <div class="message-bubble">
+                    <div class="message-date">Dec 12, 2025</div>
+                    <div class="message-content">ඔයා මට කැමති උන ඒ දවස මතකද ❤️</div>
+                </div>
+                
+                <div class="message-bubble">
+                    <div class="message-date">Dec 27, 2025</div>
+                    <div class="message-content">පළවෙනි වතාවට අතින් අල්ලගෙන උම්ම එකකුත් දුන්න දවස 😁</div>
+                </div>
+                
+                <div class="message-bubble">
+                    <div class="message-date">Jan 12, 2026</div>
+                    <div class="message-content">අදට මාසයයි බබෝ ඒ දවසට 😊</div>
+                </div>
+                
+                <div class="message-bubble">
+                    <div class="message-date">Jan 9, 2026</div>
+                    <div class="message-content">මෙදා උන දේ නම් අමතක නැතුව ඇතිනෙ 😐</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Time Counters -->
+        <section class="live-counters-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <span>අදට අපි යාළු වෙලා 😌</span>
+                </h2>
+                <p class="section-subtitle">From Dec 12, 2025</p>
+            </div>
+            
+            <div class="counter-container">
+                <!-- Desktop View (Grid Layout) -->
+                <div class="counter-grid-desktop">
+                    <div class="counter-unit large">
+                        <div class="counter-value" id="yearsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-star"></i>
+                            Years
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit large">
+                        <div class="counter-value" id="monthsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            Months
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit large">
+                        <div class="counter-value" id="daysSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-day"></i>
+                            Days
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile View (Grid Layout) -->
+                <div class="counter-grid-mobile">
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileYearsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-star"></i>
+                            Years
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileMonthsSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            Months
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileDaysSince">0</div>
+                        <div class="counter-label">
+                            <i class="fas fa-calendar-day"></i>
+                            Days
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileHoursSince">00</div>
+                        <div class="counter-label">
+                            <i class="fas fa-clock"></i>
+                            Hours
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileMinutesSince">00</div>
+                        <div class="counter-label">
+                            <i class="fas fa-hourglass-half"></i>
+                            Minutes
+                        </div>
+                    </div>
+                    
+                    <div class="counter-unit mobile">
+                        <div class="counter-value" id="mobileSecondsSince">00</div>
+                        <div class="counter-label">
+                            <i class="fas fa-stopwatch"></i>
+                            Seconds
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Time Row (Desktop) -->
+                <div class="detailed-time-row">
+                    <div class="time-unit-small">
+                        <div class="time-value-small" id="hoursSince">00</div>
+                        <div class="time-label-small">
+                            <i class="fas fa-clock"></i>
+                            Hours
+                        </div>
+                    </div>
+                    
+                    <div class="time-unit-small">
+                        <div class="time-value-small" id="minutesSince">00</div>
+                        <div class="time-label-small">
+                            <i class="fas fa-hourglass-half"></i>
+                            Minutes
+                        </div>
+                    </div>
+                    
+                    <div class="time-unit-small">
+                        <div class="time-value-small" id="secondsSince">00</div>
+                        <div class="time-label-small">
+                            <i class="fas fa-stopwatch"></i>
+                            Seconds
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Start Date Display -->
+                <div class="start-date-display">
+                    <i class="fas fa-heart-circle"></i>
+                    <span>Our journey began on <strong>Dec 12, 2025</strong></span>
+                    <i class="fas fa-heart-circle"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <div class="countdown-header">
+                <h2>
+                    <i class="fas fa-hourglass-half"></i>
+                    අවුරුද්දක් පිරෙන්න තව 😌👇
+                </h2>
+                <p class="subtitle">මේ දවස එනකනුත් මම ආසවෙන් බලන් ඉන්නෙ මැණික 😊💖</p>
+            </div>
+            
+            <div class="countdown-display">
+                <div class="countdown-unit">
+                    <div class="unit-value" id="countYears">0</div>
+                    <div class="unit-label">Years</div>
+                </div>
+                
+                <div class="countdown-unit">
+                    <div class="unit-value" id="countMonths">0</div>
+                    <div class="unit-label">Months</div>
+                </div>
+                
+                <div class="countdown-unit">
+                    <div class="unit-value" id="countDays">0</div>
+                    <div class="unit-label">Dates</div>
+                </div>
+                
+                <div class="countdown-unit">
+                    <div class="unit-value" id="countHours">00</div>
+                    <div class="unit-label">Hours</div>
+                </div>
+                
+                <div class="countdown-unit">
+                    <div class="unit-value" id="countMinutes">00</div>
+                    <div class="unit-label">minutes</div>
+                </div>
+                
+                <div class="countdown-unit">
+                    <div class="unit-value" id="countSeconds">00</div>
+                    <div class="unit-label">seconds</div>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>Time Progress</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Cards with Images -->
+        <section class="memories-section">
+            <h2 class="section-title">
+                <i class="fas fa-memory"></i>
+                <span>Our Special Memories</span>
+            </h2>
+            
+            <div class="memories-grid">
+                <div class="memory-card" onclick="showMessage('ඔයත් එක්ක මේ පටන් ගත්ත ගමන අන්තිම වෙනකන් මම යන්න ආසයි මැණික 💝')">
+                    <div class="memory-image">
+                        <video class="memory-video" controls loop playsinline>
+                            <source src="https://files.catbox.moe/p5b25n.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="memory-info">
+                        <h3>කැමති උන දවස ❤️</h3>
+                        <p>Dec 12, 2025</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card" onclick="showMessage('මම උම්ම එකක් දුන්නම ඇගම සීතල වෙලා ගියා මතකද 💋')">
+                    <div class="memory-image" style="background-image: url('https://i.ibb.co/35m3fZCH/1768122577629.jpg');">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="memory-info">
+                        <h3>මතකද උම්මා එක 😁</h3>
+                        <p>Dec 27, 2025</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card" onclick="showMessage('මාසයක් හිටිය වගේ දිගටම ඉමු බබෝ 🎉')">
+                    <div class="memory-image" style="background-image: url('https://i.ibb.co/3532mt4T/1766327451639.jpg');">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="memory-info">
+                        <h3>1 Month Anniversary</h3>
+                        <p>Jan 12, 2026</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card" onclick="showMessage('අපි දිගටම මෙහෙම ඉමුකො මැණික.ප්‍රශ්න නම් එයි ඒත් මම ආසයි ඔයා මාව අත අරින්නෙ නැතුව මාත් එක්ක දිගටම ඉදී කියල 🥹✨')">
+                    <div class="memory-image" style="background-image: url('https://i.ibb.co/PvJnyMK7/1768135541989.jpg');">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="memory-info">
+                        <h3>Our Future Together</h3>
+                        <p>ඉස්සරහට</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Display -->
+        <div class="message-display" id="messageDisplay">
+            උඩ ඔය පේන කාඩ් එකින් එක ඔබල මෙතනින් එන මැසේජ් එක කියවල බලන්නකො ගෙම්බියෙ 😁❤️
+        </div>
+
+        <!-- Love Note -->
+        <section class="love-note-section">
+            <div class="love-note">
+                <div class="note-header">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>මගෙ මැණික ❤️</h3>
+                </div>
+                <div class="note-content">
+                    <p>ඔයත් එක්ක මම මේ ඉදපු කාලෙ ගොඩක් සතුටින් හිටිය ඇත්තටම,දවසක් දෙකක් හිත රිදුනට මම කැමති නෑ ඔයාව වෙන කෙනෙක්ට දෙන්නවත් ඔයා මාව දාලා යනවටවත්.ඉතිං මැණීක මට ඕනෙ ඔයාගෙ ආදරේ විතරයි, ඒක මට නොදී ඉන්න එපා (කුක්කුත් ඕනෙ ඉතිං 😁💖) මෝඩ වැඩ කරගෙන කලින් ගෙවල් වලින් අහු වෙන්නත් එපා,අපි ප්‍රශ්න ඔක්කොටොම මූන දීල එකටම ඉමු සුදූ,මට ඔයාව විතරයි ඕනෙ,ඔයා නැති උනොත් මට මොනව වෙයිද මම මොනව කරගනියිද මම දනෙ නෑ වස්තුවේ.මගෙ මැණිකටම ඇත්තටම මම ආදරෙයි,මම වෙබ්සයිට් හදන එකත් මාස හය හතකට කලින් නවත්තල තිබ්බෙ,ඔයා නිසාමයි මම මේකකුත් හැදුවෙ,ඔයාට මේක ලොකු දෙයක් නොවෙන්න පුලුවන් ඒත් මම හෙන කට්ටක් කාල මේක හැදුවෙ ඔයා වෙනුවෙන්මයි රත්තරං,මම හිතනව ඔයා ගොඩක් දුරකට සතුටු වෙන්න ඇති කියල මේකෙන්.මොකද මම වැඩ්ඩෙක් නෙවේ මීට වැඩිය ලොකු ඒව හදල ඔයාව සතුටු කරන්න.සමාවෙන්න මැණික මට දැනට කරන්න පුලුවන් මෙච්චරයි,ඉස්සරහට මම තව ඉගෙනගෙන ලෝකු එකක් හදන්නම්කො අවුරුද්දෙ ඇනිවසරි එකට 💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖.</p>
+                </div>
+                <button class="love-btn" onclick="createHearts(20)">
+                    <i class="fas fa-heart"></i>
+                    Send Love
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">💖</div>
+                    <div>
+                        <p>මේක හැදුවෙ මගෙ මැණිකටමයි 🥹</p>
+                        <p class="footer-small">මම ඔයත් එක්ක මේ ගමන දිගටම යන්න ආසයි මැණික 😊❤️</p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="update-status">
+                        <i class="fas fa-circle"></i>
+                        <span>Live updating every second</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Hearts Container -->
+    <div id="heartsContainer"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
