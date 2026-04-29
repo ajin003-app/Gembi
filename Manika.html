@@ -1,353 +1,810 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1 Month Anniversary Gembiye 💕</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ආදරෙයි මගෙ මැට්ටිට 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:        #c0392b;
+  --red-mid:    #e05c5c;
+  --red-light:  #f5b8b8;
+  --red-pale:   #fdf0f0;
+  --red-deep:   #7b1c1c;
+  --rose:       #d45c7a;
+  --rose-light: #f7d0d9;
+  --rose-pale:  #fef5f7;
+  --gold:       #b8924a;
+  --gold-light: #f5e8cc;
+  --cream:      #fdfaf8;
+  --white:      #ffffff;
+  --txt:        #2a1010;
+  --txt-mid:    #6b2525;
+  --txt-soft:   #a07070;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream); color:var(--txt);
+  min-height:100vh; overflow-x:hidden;
+}
+
+/* ═══════════════════════════════════════
+   BACKGROUND GLOW ORBS
+═══════════════════════════════════════ */
+.bg-orbs {
+  position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
+}
+.orb {
+  position:absolute; border-radius:50%;
+  filter:blur(70px); opacity:0.22;
+  animation:orbFloat ease-in-out infinite;
+}
+.orb1 {
+  width:420px; height:420px;
+  background:radial-gradient(circle, #e05c5c, transparent);
+  top:-80px; left:-80px;
+  animation-duration:12s; animation-delay:0s;
+}
+.orb2 {
+  width:320px; height:320px;
+  background:radial-gradient(circle, #d45c7a, transparent);
+  top:30%; right:-60px;
+  animation-duration:15s; animation-delay:3s;
+}
+.orb3 {
+  width:260px; height:260px;
+  background:radial-gradient(circle, #b8924a, transparent);
+  bottom:10%; left:20%;
+  animation-duration:10s; animation-delay:6s;
+}
+.orb4 {
+  width:200px; height:200px;
+  background:radial-gradient(circle, #c0392b, transparent);
+  bottom:30%; right:10%;
+  animation-duration:18s; animation-delay:1s;
+}
+@keyframes orbFloat {
+  0%,100% { transform:translate(0,0) scale(1); }
+  33%     { transform:translate(30px,-40px) scale(1.1); }
+  66%     { transform:translate(-20px,20px) scale(0.92); }
+}
+
+/* ═══════════════════════════════════════
+   PETALS
+═══════════════════════════════════════ */
+.petals-bg { position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden; }
+.petal {
+  position:absolute; border-radius:50% 0 50% 0; opacity:0;
+  animation:fall linear infinite;
+}
+@keyframes fall {
+  0%   { transform:translateY(-30px) rotate(0deg)   translateX(0);   opacity:.8; }
+  50%  { transform:translateY(50vh)  rotate(200deg) translateX(20px); opacity:.6; }
+  100% { transform:translateY(110vh) rotate(400deg) translateX(-10px);opacity:0; }
+}
+.petal:nth-child(1)  { left:4%;  width:9px;  height:13px; background:#f5a0a0; animation-duration:9s;  animation-delay:0s;   }
+.petal:nth-child(2)  { left:14%; width:11px; height:15px; background:#f2b8b8; animation-duration:12s; animation-delay:2s;   }
+.petal:nth-child(3)  { left:24%; width:7px;  height:11px; background:#f8c8c8; animation-duration:8s;  animation-delay:4.5s; }
+.petal:nth-child(4)  { left:36%; width:13px; height:17px; background:#f5a0a0; animation-duration:14s; animation-delay:1s;   }
+.petal:nth-child(5)  { left:48%; width:9px;  height:13px; background:#f2b8b8; animation-duration:10s; animation-delay:6s;   }
+.petal:nth-child(6)  { left:58%; width:11px; height:15px; background:#f8c8c8; animation-duration:13s; animation-delay:3s;   }
+.petal:nth-child(7)  { left:68%; width:8px;  height:12px; background:#f5a0a0; animation-duration:9s;  animation-delay:7s;   }
+.petal:nth-child(8)  { left:77%; width:10px; height:14px; background:#f2b8b8; animation-duration:15s; animation-delay:0.5s; }
+.petal:nth-child(9)  { left:86%; width:7px;  height:11px; background:#f8c8c8; animation-duration:10s; animation-delay:5s;   }
+.petal:nth-child(10) { left:93%; width:12px; height:16px; background:#f5a0a0; animation-duration:11s; animation-delay:8.5s; }
+.petal:nth-child(11) { left:9%;  width:6px;  height:10px; background:#f8c8c8; animation-duration:16s; animation-delay:9s;   }
+.petal:nth-child(12) { left:71%; width:9px;  height:13px; background:#f2b8b8; animation-duration:11s; animation-delay:11s;  }
+.petal:nth-child(13) { left:42%; width:8px;  height:12px; background:#f5a0a0; animation-duration:13s; animation-delay:14s;  }
+.petal:nth-child(14) { left:62%; width:10px; height:14px; background:#f8c8c8; animation-duration:9s;  animation-delay:16s;  }
+
+/* ═══════════════════════════════════════
+   PAGE
+═══════════════════════════════════════ */
+.page { position:relative; z-index:2; max-width:860px; margin:0 auto; padding:0 20px 80px; }
+
+/* ═══════════════════════════════════════
+   FADE-UP ON SCROLL (JS adds .visible)
+═══════════════════════════════════════ */
+.fade-up {
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.fade-up.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+.hero { text-align:center; padding:64px 20px 44px; }
+
+.hero-tag {
+  font-size:11px; letter-spacing:6px; color:var(--gold);
+  text-transform:uppercase; font-weight:600; display:block; margin-bottom:18px;
+  animation:fadeDown .8s ease .1s both;
+}
+@keyframes fadeDown {
+  0%   { opacity:0; transform:translateY(-18px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+
+.hero-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,10vw,72px); font-weight:700; font-style:italic;
+  color:var(--red-deep); line-height:1.05; margin-bottom:12px;
+  animation:titleReveal 1s cubic-bezier(.22,1,.36,1) .2s both;
+}
+@keyframes titleReveal {
+  0%   { opacity:0; transform:scale(.88) translateY(24px); }
+  100% { opacity:1; transform:scale(1) translateY(0); }
+}
+
+.hero-sub {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(16px,4vw,23px); color:var(--txt-soft);
+  font-style:italic; margin-bottom:32px;
+  animation:fadeUp .8s ease .45s both;
+}
+@keyframes fadeUp {
+  0%   { opacity:0; transform:translateY(16px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+
+/* Floating hearts beside title */
+.heart-float {
+  display:inline-block;
+  animation:heartBounce 2.4s ease-in-out infinite;
+  color:var(--rose);
+}
+.heart-float:nth-child(2) { animation-delay:.4s; }
+.heart-float:nth-child(3) { animation-delay:.8s; }
+@keyframes heartBounce {
+  0%,100% { transform:translateY(0) scale(1); }
+  40%     { transform:translateY(-12px) scale(1.18); }
+  60%     { transform:translateY(-6px) scale(1.08); }
+}
+
+.divider {
+  display:flex; align-items:center; justify-content:center;
+  gap:14px; margin:0 auto 38px;
+  animation:fadeUp .8s ease .6s both;
+}
+.divider::before,.divider::after { content:''; height:0.5px; width:90px; }
+.divider::before { background:linear-gradient(to right, transparent, var(--gold)); }
+.divider::after  { background:linear-gradient(to left,  transparent, var(--gold)); }
+.divider span { color:var(--gold); font-size:16px; animation:rotateStar 8s linear infinite; display:inline-block; }
+@keyframes rotateStar {
+  0%   { transform:rotate(0deg); }
+  100% { transform:rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════
+   LIVE CLOCK
+═══════════════════════════════════════ */
+.clock {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(50px,13vw,100px); font-weight:400;
+  color:var(--red); letter-spacing:6px; line-height:1; margin-bottom:10px;
+  animation:fadeUp .8s ease .7s both;
+  position:relative; display:inline-block;
+}
+/* glow pulse on clock */
+.clock { animation:fadeUp .8s ease .7s both, clockGlow 3s ease-in-out infinite; }
+@keyframes clockGlow {
+  0%,100% { text-shadow: 0 0 0px transparent; }
+  50%     { text-shadow: 0 0 24px rgba(192,57,43,.35), 0 0 60px rgba(192,57,43,.12); }
+}
+
+.clock-date {
+  font-size:12px; color:var(--txt-soft); letter-spacing:3px; text-transform:uppercase;
+  animation:fadeUp .8s ease .85s both;
+}
+
+/* ═══════════════════════════════════════
+   BANNER
+═══════════════════════════════════════ */
+.yr-banner {
+  border-radius:20px; padding:28px 32px; text-align:center;
+  margin-bottom:24px; position:relative; overflow:hidden;
+  background:linear-gradient(135deg, var(--red-deep), var(--rose));
+  animation:bannerPulse 4s ease-in-out infinite;
+}
+@keyframes bannerPulse {
+  0%,100% { box-shadow:0 4px 30px rgba(192,57,43,.3); }
+  50%     { box-shadow:0 8px 50px rgba(192,57,43,.55); }
+}
+.yr-banner::before {
+  content:''; position:absolute; inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(255,255,255,.04) 18px,rgba(255,255,255,.04) 19px);
+}
+/* rotating shimmer overlay */
+.yr-banner::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.08) 50%, transparent 70%);
+  animation:shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+  0%   { transform:translateX(-100%); }
+  100% { transform:translateX(200%); }
+}
+.yr-banner .emoji {
+  font-size:36px; display:block; margin-bottom:10px; position:relative; z-index:1;
+  animation:heartBounce 2s ease-in-out infinite;
+}
+.yr-banner .title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(24px,6vw,42px); font-weight:700; font-style:italic;
+  color:#fff; margin-bottom:6px; position:relative; z-index:1;
+}
+.yr-banner .sub { font-size:13px; color:rgba(255,255,255,.78); position:relative; z-index:1; }
+
+/* ═══════════════════════════════════════
+   CARDS
+═══════════════════════════════════════ */
+.card {
+  background:var(--white); border:0.5px solid var(--red-light);
+  border-radius:22px; padding:40px 36px; margin-bottom:24px;
+  position:relative; overflow:hidden;
+  transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
+}
+.card:hover {
+  transform:translateY(-6px) scale(1.012);
+  box-shadow:0 20px 60px rgba(192,57,43,.13), 0 4px 20px rgba(192,57,43,.08);
+}
+.card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--red-light), var(--red), var(--rose), var(--red-light));
+  background-size:200% 100%;
+  animation:gradientSlide 4s linear infinite;
+}
+@keyframes gradientSlide {
+  0%   { background-position:0% 0%; }
+  100% { background-position:200% 0%; }
+}
+/* shimmer sweep on hover */
+.card::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.5) 50%, transparent 70%);
+  transform:translateX(-100%);
+  transition:transform .55s ease;
+  pointer-events:none;
+}
+.card:hover::after { transform:translateX(150%); }
+
+.card-tag {
+  font-size:10px; letter-spacing:4px; color:var(--red);
+  text-transform:uppercase; font-weight:600; margin-bottom:18px;
+  display:flex; align-items:center; gap:10px;
+}
+.card-tag::after { content:''; flex:1; height:0.5px; background:var(--red-light); }
+
+.card-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,5vw,30px); font-weight:400; font-style:italic;
+  color:var(--txt); margin-bottom:6px;
+}
+.card-note { font-size:13.5px; color:var(--txt-soft); line-height:1.75; margin-bottom:32px; }
+
+/* ═══════════════════════════════════════
+   TIMER GRIDS
+═══════════════════════════════════════ */
+.tgrid { display:grid; gap:14px; margin-bottom:16px; }
+.g3    { grid-template-columns:repeat(3,1fr); }
+.g5    { grid-template-columns:repeat(5,1fr); }
+@media(max-width:560px){ .g5 { grid-template-columns:repeat(3,1fr); } }
+
+/* ═══════════════════════════════════════
+   TIMER BOX — float + glow + hover scale
+═══════════════════════════════════════ */
+.tbox {
+  text-align:center; border-radius:14px; padding:22px 8px 17px;
+  border:1px solid var(--red-light); background:var(--red-pale);
+  position:relative; overflow:hidden;
+  transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease;
+  animation:boxFloat ease-in-out infinite;
+}
+/* stagger float timing per child */
+.tgrid .tbox:nth-child(1) { animation-duration:3.8s; animation-delay:0s; }
+.tgrid .tbox:nth-child(2) { animation-duration:4.2s; animation-delay:.5s; }
+.tgrid .tbox:nth-child(3) { animation-duration:3.6s; animation-delay:1s; }
+.tgrid .tbox:nth-child(4) { animation-duration:4.5s; animation-delay:.3s; }
+.tgrid .tbox:nth-child(5) { animation-duration:3.9s; animation-delay:.8s; }
+@keyframes boxFloat {
+  0%,100% { transform:translateY(0); }
+  50%     { transform:translateY(-6px); }
+}
+.tbox:hover {
+  transform:translateY(-10px) scale(1.07) !important;
+  box-shadow:0 16px 40px rgba(192,57,43,.2), 0 0 20px rgba(212,92,122,.15);
+  z-index:10;
+}
+/* glow ring on hover */
+.tbox::before {
+  content:''; position:absolute; inset:-1px; border-radius:15px;
+  background:linear-gradient(135deg, var(--red-light), var(--rose), var(--gold));
+  opacity:0; z-index:0;
+  transition:opacity .3s ease;
+}
+.tbox:hover::before { opacity:1; }
+.tbox > * { position:relative; z-index:1; }
+
+.tbox.alt  { background:var(--rose-pale); border-color:var(--rose-light); }
+.tbox.gold { background:var(--gold-light); border-color:rgba(184,146,74,.35); }
+.tbox.alt:hover  { box-shadow:0 16px 40px rgba(212,92,122,.22); }
+.tbox.gold:hover { box-shadow:0 16px 40px rgba(184,146,74,.3); }
+
+/* ═══════════════════════════════════════
+   THE NUMBER
+═══════════════════════════════════════ */
+.tval {
+  display:block;
+  font-family:'DM Sans',sans-serif;
+  font-weight:600;
+  font-size:clamp(30px,7.5vw,48px);
+  line-height:1; letter-spacing:-1px;
+  color:var(--red-deep);
+  transition:color .2s;
+}
+.tbox.alt  .tval { color:var(--rose); }
+.tbox.gold .tval { color:#7a5218; }
+.tval.sm { font-size:clamp(22px,5.5vw,36px); }
+
+.tlabel {
+  font-size:9.5px; letter-spacing:2.5px; color:var(--txt-soft);
+  text-transform:uppercase; margin-top:9px; font-weight:600;
+}
+
+/* ═══════════════════════════════════════
+   POP / BOUNCE animation on number change
+═══════════════════════════════════════ */
+@keyframes popBounce {
+  0%   { transform:scale(.55); opacity:0; }
+  45%  { transform:scale(1.25); opacity:1; }
+  65%  { transform:scale(.92); }
+  80%  { transform:scale(1.06); }
+  100% { transform:scale(1);   opacity:1; }
+}
+.pop { animation:popBounce .38s cubic-bezier(.22,1,.36,1); }
+
+/* ═══════════════════════════════════════
+   TOTAL SECONDS BOX
+═══════════════════════════════════════ */
+.total-box {
+  text-align:center; padding:24px 20px; margin-top:16px;
+  background:linear-gradient(135deg, var(--red-pale), var(--rose-pale));
+  border:1px solid var(--red-light); border-radius:14px;
+  position:relative; overflow:hidden;
+  transition:transform .3s ease, box-shadow .3s ease;
+  animation:boxFloat 5s ease-in-out infinite;
+}
+.total-box:hover {
+  transform:scale(1.03) translateY(-4px);
+  box-shadow:0 12px 40px rgba(192,57,43,.18);
+}
+/* pulse ring */
+.total-box::after {
+  content:''; position:absolute; inset:0; border-radius:14px;
+  box-shadow:inset 0 0 0 1.5px var(--red-light);
+  animation:ringPulse 3s ease-in-out infinite;
+}
+@keyframes ringPulse {
+  0%,100% { opacity:.4; transform:scale(1); }
+  50%     { opacity:1;  transform:scale(1.015); }
+}
+.total-num {
+  font-family:'DM Sans',sans-serif;
+  font-size:clamp(28px,7vw,44px); font-weight:700;
+  color:var(--red-deep); letter-spacing:-1px;
+}
+.total-lbl {
+  font-size:10px; letter-spacing:3px; color:var(--txt-soft);
+  text-transform:uppercase; margin-top:7px; font-weight:600;
+}
+
+/* ═══════════════════════════════════════
+   BADGE
+═══════════════════════════════════════ */
+.badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--red-pale); border:1px solid var(--red-light);
+  border-radius:100px; padding:10px 22px;
+  font-size:13px; color:var(--txt-mid); margin-top:18px;
+  cursor:default;
+  transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.badge:hover {
+  transform:scale(1.08) translateY(-3px);
+  background:var(--red-light);
+  box-shadow:0 8px 24px rgba(192,57,43,.18);
+}
+.badge b { color:var(--red); }
+
+/* ═══════════════════════════════════════
+   PROGRESS BAR
+═══════════════════════════════════════ */
+.prog-wrap { margin-top:32px; }
+.prog-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.prog-lbl  { font-size:11px; letter-spacing:3px; color:var(--txt-soft); text-transform:uppercase; font-weight:600; }
+.prog-pct  {
+  font-family:'Playfair Display',serif; font-size:26px; font-weight:400; color:var(--red);
+  animation:pctPulse 2s ease-in-out infinite;
+}
+@keyframes pctPulse {
+  0%,100% { opacity:1; }
+  50%     { opacity:.65; }
+}
+.prog-track {
+  height:10px; background:var(--red-pale);
+  border-radius:100px; overflow:hidden; border:1px solid var(--red-light);
+  position:relative;
+}
+.prog-fill {
+  height:100%; width:0%;
+  background:linear-gradient(90deg, var(--red-light), var(--red), var(--rose));
+  background-size:200% 100%;
+  border-radius:100px; transition:width 1.2s cubic-bezier(.22,1,.36,1);
+  animation:gradientSlide 3s linear infinite;
+  position:relative;
+}
+/* moving shine on fill */
+.prog-fill::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%);
+  animation:progShine 2s linear infinite;
+}
+@keyframes progShine {
+  0%   { transform:translateX(-100%); }
+  100% { transform:translateX(300%); }
+}
+.prog-info { font-size:11px; color:var(--txt-soft); margin-top:8px; text-align:right; }
+
+/* ═══════════════════════════════════════
+   FOOTER QUOTE
+═══════════════════════════════════════ */
+.footer { text-align:center; padding:48px 20px 20px; }
+.quote {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(17px,4.5vw,28px); font-style:italic;
+  color:var(--red-deep); line-height:1.6;
+  animation:quoteFloat 6s ease-in-out infinite;
+}
+@keyframes quoteFloat {
+  0%,100% { transform:translateY(0); }
+  50%     { transform:translateY(-8px); }
+}
+.quote-line {
+  font-size:13px; letter-spacing:4px; color:var(--gold); margin-top:16px;
+  animation:heartBounce 2s ease-in-out infinite;
+  display:inline-block;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media(max-width:560px){
+  .card { padding:24px 16px; }
+  .tgrid { gap:9px; }
+  .tbox { padding:14px 5px 12px; border-radius:10px; }
+  .yr-banner { padding:22px 18px; }
+}
+
+/* ═══════════════════════════════════════
+   SCROLL PARALLAX STARS
+═══════════════════════════════════════ */
+.star-layer {
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+}
+.star {
+  position:absolute; border-radius:50%;
+  background:var(--red-light); opacity:0.55;
+  animation:twinkle ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%,100% { opacity:.15; transform:scale(1); }
+  50%     { opacity:.55; transform:scale(1.5); }
+}
+</style>
 </head>
 <body>
-    <!-- Background Elements -->
-    <div class="bg-gradient"></div>
-    <div class="floating-elements"></div>
-    
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-main">
-                <div class="logo">
-                    <div class="heart-logo">💝</div>
-                    <div class="logo-text">
-                        <h1>ආදරෙයි මගෙ මැට්ටිට 😊💖</h1>
-                        <p>මගෙ චූටි ගෙම්බි 😊</p>
-                    </div>
-                </div>
-                <div class="current-time-display">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <div class="live-time" id="liveTimeNow">00:00:00</div>
-                        <div class="live-date" id="currentDateNow">Loading...</div>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <!-- Journey Messages Section (Small) -->
-        <section class="journey-section">
-            <h2 class="section-title">
-                <i class="fas fa-heart-circle-check"></i>
-                <span>මැණික 😊💖</span>
-            </h2>
-            
-            <div class="journey-messages">
-                <div class="message-bubble">
-                    <div class="message-date">Dec 12, 2025</div>
-                    <div class="message-content">ඔයා මට කැමති උන ඒ දවස මතකද ❤️</div>
-                </div>
-                
-                <div class="message-bubble">
-                    <div class="message-date">Dec 27, 2025</div>
-                    <div class="message-content">පළවෙනි වතාවට අතින් අල්ලගෙන උම්ම එකකුත් දුන්න දවස 😁</div>
-                </div>
-                
-                <div class="message-bubble">
-                    <div class="message-date">Jan 12, 2026</div>
-                    <div class="message-content">අදට මාසයයි බබෝ ඒ දවසට 😊</div>
-                </div>
-                
-                <div class="message-bubble">
-                    <div class="message-date">Jan 9, 2026</div>
-                    <div class="message-content">මෙදා උන දේ නම් අමතක නැතුව ඇතිනෙ 😐</div>
-                </div>
-            </div>
-        </section>
+<!-- Background glow orbs -->
+<div class="bg-orbs">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="orb orb4"></div>
+</div>
 
-        <!-- Live Time Counters -->
-        <section class="live-counters-section">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-clock-rotate-left"></i>
-                    <span>අදට අපි යාළු වෙලා 😌</span>
-                </h2>
-                <p class="section-subtitle">From Dec 12, 2025</p>
-            </div>
-            
-            <div class="counter-container">
-                <!-- Desktop View (Grid Layout) -->
-                <div class="counter-grid-desktop">
-                    <div class="counter-unit large">
-                        <div class="counter-value" id="yearsSince">0</div>
-                        <div class="counter-label">
-                            <i class="fas fa-calendar-star"></i>
-                            Years
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit large">
-                        <div class="counter-value" id="monthsSince">0</div>
-                        <div class="counter-label">
-                            <i class="fas fa-calendar-alt"></i>
-                            Months
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit large">
-                        <div class="counter-value" id="daysSince">0</div>
-                        <div class="counter-label">
-                            <i class="fas fa-calendar-day"></i>
-                            Days
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mobile View (Grid Layout) -->
-                <div class="counter-grid-mobile">
-                    <div class="counter-unit mobile">
-                        <div class="counter-value" id="mobileYearsSince">0</div>
-                        <div class="counter-label">
-                            <i class="fas fa-calendar-star"></i>
-                            Years
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit mobile">
-                        <div class="counter-value" id="mobileMonthsSince">0</div>
-                        <div class="counter-label">
-                            <i class="fas fa-calendar-alt"></i>
-                            Months
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit mobile">
-                        <div class="counter-value" id="mobileDaysSince">0</div>
-                        <div class="counter-label">
-                            <i class="fas fa-calendar-day"></i>
-                            Days
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit mobile">
-                        <div class="counter-value" id="mobileHoursSince">00</div>
-                        <div class="counter-label">
-                            <i class="fas fa-clock"></i>
-                            Hours
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit mobile">
-                        <div class="counter-value" id="mobileMinutesSince">00</div>
-                        <div class="counter-label">
-                            <i class="fas fa-hourglass-half"></i>
-                            Minutes
-                        </div>
-                    </div>
-                    
-                    <div class="counter-unit mobile">
-                        <div class="counter-value" id="mobileSecondsSince">00</div>
-                        <div class="counter-label">
-                            <i class="fas fa-stopwatch"></i>
-                            Seconds
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Detailed Time Row (Desktop) -->
-                <div class="detailed-time-row">
-                    <div class="time-unit-small">
-                        <div class="time-value-small" id="hoursSince">00</div>
-                        <div class="time-label-small">
-                            <i class="fas fa-clock"></i>
-                            Hours
-                        </div>
-                    </div>
-                    
-                    <div class="time-unit-small">
-                        <div class="time-value-small" id="minutesSince">00</div>
-                        <div class="time-label-small">
-                            <i class="fas fa-hourglass-half"></i>
-                            Minutes
-                        </div>
-                    </div>
-                    
-                    <div class="time-unit-small">
-                        <div class="time-value-small" id="secondsSince">00</div>
-                        <div class="time-label-small">
-                            <i class="fas fa-stopwatch"></i>
-                            Seconds
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Start Date Display -->
-                <div class="start-date-display">
-                    <i class="fas fa-heart-circle"></i>
-                    <span>Our journey began on <strong>Dec 12, 2025</strong></span>
-                    <i class="fas fa-heart-circle"></i>
-                </div>
-            </div>
-        </section>
+<!-- Twinkling stars -->
+<div class="star-layer" id="starLayer"></div>
 
-        <!-- Countdown Section -->
-        <section class="countdown-section">
-            <div class="countdown-header">
-                <h2>
-                    <i class="fas fa-hourglass-half"></i>
-                    අවුරුද්දක් පිරෙන්න තව 😌👇
-                </h2>
-                <p class="subtitle">මේ දවස එනකනුත් මම ආසවෙන් බලන් ඉන්නෙ මැණික 😊💖</p>
-            </div>
-            
-            <div class="countdown-display">
-                <div class="countdown-unit">
-                    <div class="unit-value" id="countYears">0</div>
-                    <div class="unit-label">Years</div>
-                </div>
-                
-                <div class="countdown-unit">
-                    <div class="unit-value" id="countMonths">0</div>
-                    <div class="unit-label">Months</div>
-                </div>
-                
-                <div class="countdown-unit">
-                    <div class="unit-value" id="countDays">0</div>
-                    <div class="unit-label">Dates</div>
-                </div>
-                
-                <div class="countdown-unit">
-                    <div class="unit-value" id="countHours">00</div>
-                    <div class="unit-label">Hours</div>
-                </div>
-                
-                <div class="countdown-unit">
-                    <div class="unit-value" id="countMinutes">00</div>
-                    <div class="unit-label">minutes</div>
-                </div>
-                
-                <div class="countdown-unit">
-                    <div class="unit-value" id="countSeconds">00</div>
-                    <div class="unit-label">seconds</div>
-                </div>
-            </div>
-            
-            <div class="progress-container">
-                <div class="progress-info">
-                    <span>Time Progress</span>
-                    <span id="progressPercent">0%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-            </div>
-        </section>
+<!-- Falling petals -->
+<div class="petals-bg">
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div>
+</div>
 
-        <!-- Memory Cards with Images -->
-        <section class="memories-section">
-            <h2 class="section-title">
-                <i class="fas fa-memory"></i>
-                <span>Our Special Memories</span>
-            </h2>
-            
-            <div class="memories-grid">
-                <div class="memory-card" onclick="showMessage('ඔයත් එක්ක මේ පටන් ගත්ත ගමන අන්තිම වෙනකන් මම යන්න ආසයි මැණික 💝')">
-                    <div class="memory-image">
-                        <video class="memory-video" controls loop playsinline>
-                            <source src="https://files.catbox.moe/p5b25n.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                    </div>
-                    <div class="memory-info">
-                        <h3>කැමති උන දවස ❤️</h3>
-                        <p>Dec 12, 2025</p>
-                    </div>
-                </div>
-                
-                <div class="memory-card" onclick="showMessage('මම උම්ම එකක් දුන්නම ඇගම සීතල වෙලා ගියා මතකද 💋')">
-                    <div class="memory-image" style="background-image: url('https://i.ibb.co/35m3fZCH/1768122577629.jpg');">
-                        <div class="image-overlay">
-                        </div>
-                    </div>
-                    <div class="memory-info">
-                        <h3>මතකද උම්මා එක 😁</h3>
-                        <p>Dec 27, 2025</p>
-                    </div>
-                </div>
-                
-                <div class="memory-card" onclick="showMessage('මාසයක් හිටිය වගේ දිගටම ඉමු බබෝ 🎉')">
-                    <div class="memory-image" style="background-image: url('https://i.ibb.co/3532mt4T/1766327451639.jpg');">
-                        <div class="image-overlay">
-                        </div>
-                    </div>
-                    <div class="memory-info">
-                        <h3>1 Month Anniversary</h3>
-                        <p>Jan 12, 2026</p>
-                    </div>
-                </div>
-                
-                <div class="memory-card" onclick="showMessage('අපි දිගටම මෙහෙම ඉමුකො මැණික.ප්‍රශ්න නම් එයි ඒත් මම ආසයි ඔයා මාව අත අරින්නෙ නැතුව මාත් එක්ක දිගටම ඉදී කියල 🥹✨')">
-                    <div class="memory-image" style="background-image: url('https://i.ibb.co/PvJnyMK7/1768135541989.jpg');">
-                        <div class="image-overlay">
-                        </div>
-                    </div>
-                    <div class="memory-info">
-                        <h3>Our Future Together</h3>
-                        <p>ඉස්සරහට</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="page">
 
-        <!-- Message Display -->
-        <div class="message-display" id="messageDisplay">
-            උඩ ඔය පේන කාඩ් එකින් එක ඔබල මෙතනින් එන මැසේජ් එක කියවල බලන්නකො ගෙම්බියෙ 😁❤️
-        </div>
+  <!-- Hero -->
+  <div class="hero">
+    <span class="hero-tag">✦ &nbsp; ආදරෙයි &nbsp; ✦</span>
+    <h1 class="hero-title">
+      <span class="heart-float">💖</span>
+      ආදරෙයි
+      <span class="heart-float">💖</span>
+    </h1>
+    <br>
+    <p class="hero-sub">මගෙ සුදු මැණික ඔයාට 💖</p>
+    <div class="divider"><span>✦</span></div>
+    <div class="clock" id="liveClock">--:--:--</div>
+    <br><br>
+    <div class="clock-date" id="liveDate">---</div>
+  </div>
 
-        <!-- Love Note -->
-        <section class="love-note-section">
-            <div class="love-note">
-                <div class="note-header">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <h3>මගෙ මැණික ❤️</h3>
-                </div>
-                <div class="note-content">
-                    <p>ඔයත් එක්ක මම මේ ඉදපු කාලෙ ගොඩක් සතුටින් හිටිය ඇත්තටම,දවසක් දෙකක් හිත රිදුනට මම කැමති නෑ ඔයාව වෙන කෙනෙක්ට දෙන්නවත් ඔයා මාව දාලා යනවටවත්.ඉතිං මැණීක මට ඕනෙ ඔයාගෙ ආදරේ විතරයි, ඒක මට නොදී ඉන්න එපා (කුක්කුත් ඕනෙ ඉතිං 😁💖) මෝඩ වැඩ කරගෙන කලින් ගෙවල් වලින් අහු වෙන්නත් එපා,අපි ප්‍රශ්න ඔක්කොටොම මූන දීල එකටම ඉමු සුදූ,මට ඔයාව විතරයි ඕනෙ,ඔයා නැති උනොත් මට මොනව වෙයිද මම මොනව කරගනියිද මම දනෙ නෑ වස්තුවේ.මගෙ මැණිකටම ඇත්තටම මම ආදරෙයි,මම වෙබ්සයිට් හදන එකත් මාස හය හතකට කලින් නවත්තල තිබ්බෙ,ඔයා නිසාමයි මම මේකකුත් හැදුවෙ,ඔයාට මේක ලොකු දෙයක් නොවෙන්න පුලුවන් ඒත් මම හෙන කට්ටක් කාල මේක හැදුවෙ ඔයා වෙනුවෙන්මයි රත්තරං,මම හිතනව ඔයා ගොඩක් දුරකට සතුටු වෙන්න ඇති කියල මේකෙන්.මොකද මම වැඩ්ඩෙක් නෙවේ මීට වැඩිය ලොකු ඒව හදල ඔයාව සතුටු කරන්න.සමාවෙන්න මැණික මට දැනට කරන්න පුලුවන් මෙච්චරයි,ඉස්සරහට මම තව ඉගෙනගෙන ලෝකු එකක් හදන්නම්කො අවුරුද්දෙ ඇනිවසරි එකට 💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖.</p>
-                </div>
-                <button class="love-btn" onclick="createHearts(20)">
-                    <i class="fas fa-heart"></i>
-                    Send Love
-                </button>
-            </div>
-        </section>
+  <!-- Almost 1 year banner -->
+  <div class="yr-banner fade-up" id="almostBanner" style="display:none;">
+    <span class="emoji">🌹</span>
+    <div class="title">ආදරෙ 1 Year වෙනවා!</div>
+    <div class="sub">Dec 12, 2026 — ඉක්මනෙ 1st Anniversary! 💖</div>
+  </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">💖</div>
-                    <div>
-                        <p>මේක හැදුවෙ මගෙ මැණිකටමයි 🥹</p>
-                        <p class="footer-small">මම ඔයත් එක්ක මේ ගමන දිගටම යන්න ආසයි මැණික 😊❤️</p>
-                    </div>
-                </div>
-                <div class="footer-right">
-                    <div class="update-status">
-                        <i class="fas fa-circle"></i>
-                        <span>Live updating every second</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+  <!-- 1 year complete banner -->
+  <div class="yr-banner fade-up" id="yearBanner" style="display:none; background:linear-gradient(135deg,#5a0e0e,#c0392b);">
+    <span class="emoji">🎊</span>
+    <div class="title">අවුරුද්දක් සම්පූර්ණයි!</div>
+    <div class="sub">December 12, 2025 — One whole year of love 💖</div>
+  </div>
+
+  <!-- Together Since card -->
+  <div class="card fade-up">
+    <div class="card-tag">💝 &nbsp; අපි දෙන්නා</div>
+    <h2 class="card-title">අදට අපි යාළු වෙලා...</h2>
+    <p class="card-note">December 12, 2025 ඉදලා ගිය හැම තත්පරේකම මට ලොකු පාලුවක් දැනෙනවා 🌸</p>
+
+    <div class="tgrid g3">
+      <div class="tbox">
+        <span class="tval" id="t1-years">0</span>
+        <div class="tlabel">Years</div>
+      </div>
+      <div class="tbox">
+        <span class="tval" id="t1-months">0</span>
+        <div class="tlabel">Months</div>
+      </div>
+      <div class="tbox">
+        <span class="tval" id="t1-days">0</span>
+        <div class="tlabel">Days</div>
+      </div>
     </div>
 
-    <!-- Floating Hearts Container -->
-    <div id="heartsContainer"></div>
+    <div class="tgrid g3">
+      <div class="tbox alt">
+        <span class="tval sm" id="t1-hours">00</span>
+        <div class="tlabel">Hours</div>
+      </div>
+      <div class="tbox alt">
+        <span class="tval sm" id="t1-mins">00</span>
+        <div class="tlabel">Minutes</div>
+      </div>
+      <div class="tbox alt">
+        <span class="tval sm" id="t1-secs">00</span>
+        <div class="tlabel">Seconds</div>
+      </div>
+    </div>
 
-    <!-- Script -->
-    <script src="script.js"></script>
+    <div class="total-box">
+      <div class="total-num" id="total-secs">0</div>
+      <div class="total-lbl">තත්පර කීයක් අපි ගෙවලද බලන්කො සුදූ...</div>
+    </div>
+
+    <div style="text-align:center">
+      <div class="badge">🗓️ &nbsp; <b>Dec 12, 2025</b></div>
+    </div>
+  </div>
+
+  <!-- Countdown card -->
+  <div class="card fade-up">
+    <div class="card-tag">🌸 &nbsp; Next Anniversary</div>
+    <h2 class="card-title" id="cdTitle">1st Anniversary වෙන්න...</h2>
+    <p class="card-note" id="cdNote">Dec 12, 2026 — මේ දවස එනකනුත් මම ආසවෙන් බලන් ඉන්නෙ මැණික 😊💖</p>
+
+    <div class="tgrid g5">
+      <div class="tbox gold">
+        <span class="tval sm" id="cd-months">0</span>
+        <div class="tlabel">Months</div>
+      </div>
+      <div class="tbox gold">
+        <span class="tval sm" id="cd-days">0</span>
+        <div class="tlabel">Days</div>
+      </div>
+      <div class="tbox gold">
+        <span class="tval sm" id="cd-hours">00</span>
+        <div class="tlabel">Hours</div>
+      </div>
+      <div class="tbox gold">
+        <span class="tval sm" id="cd-mins">00</span>
+        <div class="tlabel">Minutes</div>
+      </div>
+      <div class="tbox gold">
+        <span class="tval sm" id="cd-secs">00</span>
+        <div class="tlabel">Seconds</div>
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-lbl">1st Year Progress</span>
+        <span class="prog-pct" id="prog-pct">0%</span>
+      </div>
+      <div class="prog-track">
+        <div class="prog-fill" id="prog-fill"></div>
+      </div>
+      <div class="prog-info" id="prog-info"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer fade-up">
+    <p class="quote">"ඔයා මගෙ ලග ඉන්නකන් විතරයි සුදූ මේ හැමදේම<br><br>ඔයා ලග නත්තං මට මේ කිසිදෙයක් වැඩක් නෑ සුදූ."</p>
+    <div class="quote-line">— ❤ —</div>
+  </div>
+
+</div>
+
+<script>
+/* ── Config ─────────────────────────────── */
+const START  = new Date('2025-12-12T00:00:00');
+const ANNIV1 = new Date('2026-12-12T00:00:00');
+const SI_MONTHS = ['ජනවාරි','පෙබරවාරි','මාර්තු','අප්‍රේල්','මැයි','ජූනි','ජූලි','අගෝස්තු','සැප්තැම්බර්','ඔක්තෝබර්','නොවැම්බර්','දෙසැම්බර්'];
+const SI_DAYS   = ['ඉරිදා','සඳුදා','අඟහරුවාදා','බදාදා','බ්‍රහස්පතිදා','සිකුරාදා','සෙනසුරාදා'];
+function pad(n){ return String(n).padStart(2,'0'); }
+
+/* ── Twinkling stars ─────────────────────── */
+(function(){
+  const layer = document.getElementById('starLayer');
+  for(let i=0;i<28;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const sz = Math.random()*3+1;
+    s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-duration:${(Math.random()*3+2).toFixed(1)}s;animation-delay:${(Math.random()*4).toFixed(1)}s;`;
+    layer.appendChild(s);
+  }
+})();
+
+/* ── Parallax on scroll ──────────────────── */
+window.addEventListener('scroll', ()=>{
+  const y = window.scrollY;
+  document.querySelectorAll('.orb').forEach((o,i)=>{
+    const speed = [0.08, 0.12, 0.06, 0.10][i];
+    o.style.transform = `translate(0, ${y * speed}px)`;
+  });
+  document.querySelectorAll('.petal').forEach((p,i)=>{
+    const speed = 0.04 + (i%3)*0.02;
+    p.style.marginTop = (y * speed) + 'px';
+  });
+});
+
+/* ── Fade-up on scroll (IntersectionObserver) ── */
+const fadeEls = document.querySelectorAll('.fade-up');
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+},{ threshold:0.12 });
+fadeEls.forEach(el=>io.observe(el));
+
+/* ── Clock ───────────────────────────────── */
+function updateClock(){
+  const n = new Date();
+  document.getElementById('liveClock').textContent =
+    pad(n.getHours())+':'+pad(n.getMinutes())+':'+pad(n.getSeconds());
+  document.getElementById('liveDate').textContent =
+    SI_DAYS[n.getDay()]+', '+n.getDate()+' '+SI_MONTHS[n.getMonth()]+' '+n.getFullYear();
+}
+
+/* ── Elapsed ─────────────────────────────── */
+function getElapsed(now){
+  let y=now.getFullYear()-START.getFullYear();
+  let mo=now.getMonth()-START.getMonth();
+  let d=now.getDate()-START.getDate();
+  if(d<0){mo--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}
+  if(mo<0){y--;mo+=12;}
+  const ms=now-START;
+  return{y,mo,d,
+    h:Math.floor((ms%86400000)/3600000),
+    m:Math.floor((ms%3600000)/60000),
+    s:Math.floor((ms%60000)/1000),
+    secs:Math.floor(ms/1000)
+  };
+}
+
+/* ── Countdown ───────────────────────────── */
+function getCountdown(now){
+  let target=new Date(ANNIV1.getTime());
+  while(target<=now){target.setFullYear(target.getFullYear()+1);}
+  const diff=target-now;
+  const totalDays=Math.floor(diff/86400000);
+  const mo=Math.floor(totalDays/30.4375);
+  const d=totalDays-Math.floor(mo*30.4375);
+  return{mo,d,
+    h:Math.floor((diff%86400000)/3600000),
+    m:Math.floor((diff%3600000)/60000),
+    s:Math.floor((diff%60000)/1000)
+  };
+}
+
+/* ── Progress ────────────────────────────── */
+function updateProgress(now){
+  const total=ANNIV1-START;
+  const elapsed=now-START;
+  const pct=Math.min(100,Math.max(0,(elapsed/total)*100));
+  document.getElementById('prog-pct').textContent=pct.toFixed(1)+'%';
+  document.getElementById('prog-fill').style.width=pct.toFixed(4)+'%';
+  if(now>=ANNIV1){
+    document.getElementById('prog-info').textContent='🎉 1 Year Complete! Happy Anniversary! 🎉';
+  } else {
+    document.getElementById('prog-info').textContent='තව දවස් '+Math.ceil((ANNIV1-now)/86400000)+'ක් 💖';
+  }
+}
+
+/* ── Banners ─────────────────────────────── */
+function updateBanners(now){
+  const msLeft=ANNIV1-now;
+  document.getElementById('almostBanner').style.display=(msLeft>0&&msLeft<=30*86400000)?'block':'none';
+  document.getElementById('yearBanner').style.display=(now>=ANNIV1)?'block':'none';
+  if(now>=ANNIV1){
+    document.getElementById('cdTitle').textContent='2nd Anniversary දක්වා...';
+    document.getElementById('cdNote').textContent='Dec 12, 2027 — ඊළඟ සිහිවටනය 💖';
+  }
+}
+
+/* ── Set with bounce animation ───────────── */
+function setVal(id,val){
+  const el=document.getElementById(id);
+  const v=String(val);
+  if(el.textContent!==v){
+    el.textContent=v;
+    el.classList.remove('pop');
+    void el.offsetWidth;
+    el.classList.add('pop');
+  }
+}
+
+/* ── Tick ────────────────────────────────── */
+function tick(){
+  const now=new Date();
+  updateClock();
+  updateBanners(now);
+  const e=getElapsed(now);
+  setVal('t1-years',e.y);
+  setVal('t1-months',e.mo);
+  setVal('t1-days',e.d);
+  setVal('t1-hours',pad(e.h));
+  setVal('t1-mins',pad(e.m));
+  setVal('t1-secs',pad(e.s));
+  document.getElementById('total-secs').textContent=e.secs.toLocaleString();
+  const cd=getCountdown(now);
+  setVal('cd-months',cd.mo);
+  setVal('cd-days',cd.d);
+  setVal('cd-hours',pad(cd.h));
+  setVal('cd-mins',pad(cd.m));
+  setVal('cd-secs',pad(cd.s));
+  updateProgress(now);
+}
+
+tick();
+setInterval(tick,1000);
+</script>
 </body>
 </html>
